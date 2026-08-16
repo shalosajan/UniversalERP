@@ -1,0 +1,27 @@
+# UniversalERP/.gitignore
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# Node / React (For later)
+node_modules/
+dist/
+build/
+.npm/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/210

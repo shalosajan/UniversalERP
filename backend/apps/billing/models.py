@@ -1,5 +1,6 @@
 from django.db import models
 from apps.inventory.models import Product
+from django.contrib.auth.models import User
 
 
 class Customer(models.Model):
@@ -31,6 +32,9 @@ class Invoice(models.Model):
         null=True,
         blank=True,
         related_name="invoices",
+    )
+    cashier = models.ForeignKey(
+        User, on_delete=models.PROTECT, related_name="sales_handled", null=True
     )
 
     # Retail Additions

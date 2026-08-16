@@ -25,6 +25,17 @@ class PurchaseOrder(models.Model):
     def __str__(self):
         return f"PO-{self.id} | {self.vendor.name}"
 
+    # Add this inside the PurchaseOrder class
+
+
+STATUS_CHOICES = [
+    ("DRAFT", "Draft"),
+    ("PLACED", "Placed"),
+    ("RECEIVED", "Received"),
+    ("CANCELLED", "Cancelled"),
+]
+status = models.CharField(max_length=15, choices=STATUS_CHOICES, default="DRAFT")
+
 
 class PurchaseItem(models.Model):
     purchase_order = models.ForeignKey(

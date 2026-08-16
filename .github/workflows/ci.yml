@@ -35,3 +35,8 @@ jobs:
       - name: Run Ruff Formatter Check
         working-directory: ./backend
         run: uv run ruff format --check .
+
+      # Step to ensure Django can boot up securely
+      - name: Django System Check
+        working-directory: ./backend
+        run: uv run python manage.py check
