@@ -4,5 +4,5 @@ version = "0.1.0"
 requires-python = ">=3.12"
 
 [tool.ruff.lint]
-# Ignore RUF012 because Django uses mutable lists heavily for choices, meta fields, and migrations.
-ignore = ["RUF012"]
+# Ignore RUF012 for Django magic, and EXE001 for Windows/Linux permission clashes
+ignore = ["RUF012", "EXE001"]
