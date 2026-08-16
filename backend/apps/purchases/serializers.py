@@ -1,6 +1,7 @@
-from rest_framework import serializers
 from django.db import transaction
-from .models import Vendor, PurchaseOrder, PurchaseItem
+from rest_framework import serializers
+
+from .models import PurchaseItem, PurchaseOrder, Vendor
 
 
 class VendorSerializer(serializers.ModelSerializer):

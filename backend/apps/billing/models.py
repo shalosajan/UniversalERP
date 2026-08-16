@@ -1,6 +1,7 @@
-from django.db import models
-from apps.inventory.models import Product
 from django.contrib.auth.models import User
+from django.db import models
+
+from apps.inventory.models import Product
 
 
 class Customer(models.Model):

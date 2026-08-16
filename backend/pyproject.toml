@@ -1,0 +1,3 @@
+[tool.ruff.lint]
+# Ignore RUF012 because Django uses mutable lists heavily for choices, meta fields, and migrations.
+ignore = ["RUF012"]

@@ -1,5 +1,6 @@
-from pathlib import Path
 import os
+from pathlib import Path
+
 import environ  # Add this import
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

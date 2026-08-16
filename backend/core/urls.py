@@ -1,11 +1,12 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework.routers import DefaultRouter
+
+from apps.billing.views import CustomerViewSet, InvoiceViewSet
 
 # Import all our ViewSets
 from apps.inventory.views import CategoryViewSet, ProductViewSet
-from apps.purchases.views import VendorViewSet, PurchaseOrderViewSet
-from apps.billing.views import CustomerViewSet, InvoiceViewSet
+from apps.purchases.views import PurchaseOrderViewSet, VendorViewSet
 
 # 1. Initialize the Router
 router = DefaultRouter()
